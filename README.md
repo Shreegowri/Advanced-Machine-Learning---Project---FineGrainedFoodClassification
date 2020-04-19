@@ -1,2 +1,7 @@
-In this first phase, the AMLProject_BaseModel contains the ResNet trained on Food251 dataset using the weights loaded from ImgaeNet dataset. Additional Average Pooling and Prediction layers were added with respect to the 251 classes we have in this Food251 dataset and parameters for the last prediction layer is made trainable. 
-We have just trained for 100 epochs using SGD (with 0.01 learning rate and 0.9 momentum parameter). Training for more number of epochs would still push the accuracy, which we would explore in later stages accomodating the resources to train such huge network. 
+: Initial base model with Resnet50V2 architecture
+
+inception_base: Mase model with inceptionV3 architecture with 15M parameter. Which gives 62.45% top-1 accuracy and 81.14% top-3 accuracy
+
+inception_smt: Joint learning model with base inception. Which gives 64.8% top-1 accuracy and 85.57% top-3 accuracy   
+
+inception_SemiHardTripletLoss: Embedding learnings of the images using semi-hard triplet loss to visualize the 128-D embeddings
